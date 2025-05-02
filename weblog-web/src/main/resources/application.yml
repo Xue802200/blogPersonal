@@ -1,0 +1,8 @@
+spring:
+  profiles:
+    #默认激活dev环境
+    active: dev
+logging:
+  config: classpath:logback-web.xml
+server:
+  port: 8080
