@@ -29,6 +29,7 @@
         <module>weblog-module-admin</module>
         <!-- 通用模块 -->
         <module>weblog-module-common</module>
+        <module>weblog-module-jwt</module>
     </modules>
 
 
@@ -53,6 +54,8 @@
         <jackson.version>2.16.1</jackson.version>
 <!--        knife4j版本号管理-->
         <knife4j.version> 4.5.0</knife4j.version>
+        <mybatis-plus.version>3.5.2</mybatis-plus.version>
+        <p6spy.version>3.9.1</p6spy.version>
     </properties>
 
     <!-- 统一依赖管理 -->
@@ -68,6 +71,12 @@
                 <groupId>com.quanxiaoha</groupId>
                 <artifactId>weblog-module-common</artifactId>
                 <version>${revision}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.quanxiaoha</groupId>
+                <artifactId>weblog-module-jwt</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
             </dependency>
 
             <!-- 常用工具库 -->
@@ -93,7 +102,22 @@
                 <artifactId>jackson-databind</artifactId>
                 <version>${jackson.version}</version>
             </dependency>
+
+<!--            mybatisPlus的起步依赖-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>p6spy</groupId>
+                <artifactId>p6spy</artifactId>
+                <version>${p6spy.version}</version>
+            </dependency>
+
         </dependencies>
+
     </dependencyManagement>
 
     <build>
